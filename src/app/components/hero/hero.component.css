@@ -1,13 +1,16 @@
 .hero {
-    margin-top: 8rem;
+    width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+    margin: 8rem auto 0;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(2rem, 6vw, 5rem);
 
     .intro {
-        width: 50% ;
+        flex: 1 1 34rem;
 
         h1 {
-            font-size: 3rem;
+            font-size: clamp(2rem, 5vw, 3rem);
             line-height: 1.2;
             margin: 1.5rem 0;
         }
@@ -30,17 +33,34 @@
 
     .avatar {
         position: relative;
-        width: 250px;
-        height: 300px;
+        flex: 0 0 auto;
+        width: clamp(190px, 24vw, 250px);
+        height: clamp(230px, 28vw, 300px);
         overflow: hidden;
         border-radius: 50% 35% 50% 35% / 35% 50% 35% 50% ;
         border: 4px solid #000;
 
         img {
-            width: 150%;
+            scale: 1.4;
             position: absolute;
-            top: -40%;
-            left: -43%;
+            top: -10%;
+            left: -15%;
         }
+    }
+}
+
+@media (max-width: 760px) {
+    .hero {
+        margin-top: 9rem;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .hero .intro {
+        flex-basis: auto;
+    }
+
+    .hero .intro h1 br {
+        display: none;
     }
 }
