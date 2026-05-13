@@ -1,0 +1,1 @@
+:root{--primary-color: #3037ff;--text-color: rgba(0, 0, 0, .696);--page-padding: clamp(1rem, 5vw, 3rem);--content-width: 72rem}*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif}html{scroll-behavior:smooth}body{min-width:320px;overflow-x:hidden}img{max-width:100%}
