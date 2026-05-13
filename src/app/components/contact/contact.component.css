@@ -24,3 +24,11 @@ p {
     width: 24px;
     height: 24px;
 }
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    img {
+        padding-right: 0.5rem;
+    }
+}
